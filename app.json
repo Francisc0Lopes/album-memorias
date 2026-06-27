@@ -1,44 +1,47 @@
 {
   "expo": {
-    "name": "MemoriesApp",
-    "slug": "MemoriesApp",
+    "name": "Album de Memórias",
+    "slug": "memories-album",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "memoriesapp",
-    "userInterfaceStyle": "automatic",
+    "icon": "./assets/photos/welcome.jpg",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/photos/welcome.jpg",
+      "resizeMode": "contain",
+      "backgroundColor": "#FFF5F7"
+    },
     "ios": {
-      "icon": "./assets/expo.icon"
+      "supportsTabletMode": true,
+      "bundleIdentifier": "com.franciscolopes.memoriesalbum",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/images/android-icon-foreground.png",
-        "backgroundImage": "./assets/images/android-icon-background.png",
-        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+        "foregroundImage": "./assets/photos/welcome.jpg",
+        "backgroundColor": "#FFF5F7"
       },
-      "predictiveBackGestureEnabled": false
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ]
     },
     "web": {
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/photos/welcome.jpg"
     },
     "plugins": [
-      "expo-router",
       [
-        "expo-splash-screen",
+        "expo-image-picker",
         {
-          "backgroundColor": "#208AEF",
-          "android": {
-            "image": "./assets/images/splash-icon.png",
-            "imageWidth": 76
-          }
+          "photosPermission": "Allow $(PRODUCT_NAME) to access your photos"
         }
       ]
     ],
-    "experiments": {
-      "typedRoutes": true,
-      "reactCompiler": true
+    "extra": {
+      "eas": {
+        "projectId": "fcf7e11a-e425-49cb-b82a-8b0dbd13641d"
+      }
     }
   }
 }
