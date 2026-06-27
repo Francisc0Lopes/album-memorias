@@ -1,5 +1,6 @@
 {
   "name": "memoriesapp",
+  "homepage": "https://Francisc0Lopes.github.io/album-memorias",
   "main": "expo-router/entry",
   "version": "1.0.0",
   "dependencies": {
@@ -42,7 +43,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "lint": "expo lint"
+    "lint": "expo lint",
+    "deploy": "gh-pages -d dist"
   },
   "private": true
 }

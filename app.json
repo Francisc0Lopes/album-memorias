@@ -11,6 +11,9 @@
       "resizeMode": "contain",
       "backgroundColor": "#FFF5F7"
     },
+    "experiments": {
+      "baseUrl": "/album-memorias"
+    },
     "ios": {
       "supportsTabletMode": true,
       "bundleIdentifier": "com.franciscolopes.memoriesalbum",
